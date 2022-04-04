@@ -1,0 +1,16 @@
+.Layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .Layout {
+    max-width: 736px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Layout {
+    max-width: 328px;
+  }
+}

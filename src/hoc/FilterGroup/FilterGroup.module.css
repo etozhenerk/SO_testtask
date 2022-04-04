@@ -1,0 +1,12 @@
+.FilterGroup {
+  display: flex;
+}
+.FilterGroup div {
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .FilterGroup {
+    flex-direction: column;
+  }
+}

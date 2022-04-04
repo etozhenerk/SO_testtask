@@ -1,0 +1,33 @@
+.InputItem {
+  position: relative;
+}
+
+.InputItem input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #75BEEE;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #B3B3B3;
+}
+
+.InputItem input:focus, .InputItem input:active {
+  outline: none;
+}
+
+.InputItem::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(./search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

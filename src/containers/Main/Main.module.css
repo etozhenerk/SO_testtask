@@ -1,0 +1,26 @@
+.Main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Main div {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.Main div:nth-child(4n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .Main div:nth-child(2n) {
+
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Main div {
+
+    margin-right: 0px;
+  }
+}

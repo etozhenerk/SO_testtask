@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./hoc/Layout/Layout";
+import Header from "./containers/Header/Header";
+import Main from "./containers/Main/Main";
+import { usePersons } from "./hooks/usePersons";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const persons = usePersons();
+
+    return (
+        <Layout>
+            <Header genderFilter={persons.genderFilter} nameFilter={persons.nameFilter} />
+            {persons.persons && <Main persons={persons.persons} />}
+        </Layout>
+    );
 }
 
 export default App;
